@@ -1,4 +1,71 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: black;
+    color:coral;
+  
+}
+@font-face {
+    font-family: "font";
+    src: url("/src/Fonts/NORTHCLIFFDEMORegular.ttf") format('truetype');
+}
+.taskContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.taskContainer h1{
+    font-family: "font";
+    color: aqua;
+}
+.Input{
+    width: 250px;
+    height: 40px;
+     color:aqua;
+    border:aqua 2px solid;
+    background-color: black;
+
+}
+.add{
+    margin-left: 20px;
+    width: 100px;
+    height: 40px;
+    color:aqua;
+    border:aqua 2px solid;
+    background-color: black;
+}
+
+.delete{
+     width: 50px;
+    height: 40px;
+    color:coral;
+    border: coral 2px solid;
+    background-color: black;
+   
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+
+
+}
+.up,.down{
+    width :20px;
+    height:20px;
+    
+   margin-right: 5px; 
+    color:coral;
+    border: coral 2px solid;
+    background-color: black;
+  
+
+}
+.small{
+    width :500px;
+    height: 500px;
+    background-color: black;
+      border:aqua 2px solid;
+
+    margin-top: 50px;
+    border-radius: 20px;
 }
