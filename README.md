@@ -11,7 +11,7 @@ A minimalist and interactive Todo List application built with **React.js**. This
 - 🎯 Built with React Hooks (`useState`)
 - 💅 Styled with custom CSS (`TodoList.css`)
 
-📌 Concepts Applied
+## 📌 Concepts Applied
 - Controlled components (input with state)
 - Lifting and updating state immutably
 - Array manipulation (map, filter)
