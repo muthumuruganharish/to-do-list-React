@@ -23,7 +23,7 @@ function TodoList() {
     }
 
 
-    const deleteTask=(index)=>{         {/*this is for deleting task from the list */}
+    const deleteTask=(index)=>{         //this is for deleting task from the list 
 
         const updatedTask=tasks.filter((_,i)=>i!==index);         // We use the filter method to delete a task.
         // The filter callback receives two arguments: the element (which we don't need, so we use "_") and the index "i".
@@ -38,15 +38,22 @@ function TodoList() {
     }
 
 
-
-    const moveUP=(index)=>{         {/*this is for moving task up in the list */}
-
-
+const moveUP = (index) => {
+    if (index > 0) {
+        const updatedTask = [...tasks]; // Initialize first
+        [updatedTask[index], updatedTask[index - 1]] = [updatedTask[index - 1], updatedTask[index]]; // Then swap
+        setTasks(updatedTask); // Update state
     }
+};
 
 
-    const moveDown=(index)=>{         {/*this is for moving task down in the list */}
+    const moveDown=(index)=>{         /*this is for moving task down in the list */
 
+        if (index <tasks.length-1) {
+        const updatedTask = [...tasks]; // Initialize first
+        [updatedTask[index], updatedTask[index +1]] = [updatedTask[index +1], updatedTask[index]]; // Then swap
+        setTasks(updatedTask); // Update state
+    }
     }
     return(
         <div className="taskContainer">
@@ -82,6 +89,10 @@ function TodoList() {
                                                            creates a function
                                                             that will only call deleteTask(index)
                                                              when the button is clicked. */}
+
+
+                        <button className="up" onClick={()=>moveUP(index)}>↑</button>
+                        <button className="down" onClick={()=>moveDown(index)}>↓</button>
 
 
 
